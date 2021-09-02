@@ -1,0 +1,400 @@
+/* default css */
+
+
+
+
+
+
+/* header css start  */
+
+header{
+    background: #000000ab;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+header .logo{
+    float: left;
+    margin-left: 50px;
+}
+header .logo img {
+    width: 290px;
+    margin-top: 2px;
+}
+header nav{
+    float: right;
+    margin-right: 130px;
+}
+header nav ul{
+    margin-bottom: 0;
+}
+header nav ul li{
+    display: inline-block;
+   
+    line-height: 40px;
+    position: relative;
+}
+header nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 22px;
+    position: relative;
+    transition: .4s;
+}
+
+/* hover part start */
+
+.active, header nav ul li a:hover{
+    color: #866941;
+    
+}
+header nav ul li a::after{
+ content: "";
+ height: 2px;
+ width: 100%;
+ background:#b3956d;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ visibility: hidden;
+ opacity: 0;
+ transform: scale(0);
+ transform-origin: center;
+ transition: .5s;
+}
+header nav ul li a:hover::after{
+    visibility: visible;
+ opacity: 1;
+ transform: scale(1);
+}
+header nav ul li ul {
+    position: absolute;
+    left: 0;
+    top: 57px;
+    background: white;
+    margin-left: 0px;
+    padding-left: 0;
+    width: 250px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    transform: scaleY(0);
+    transform-origin: center;
+}
+header nav ul li ul li{
+    display: block;
+}
+header nav ul li ul li a{
+    color: black;
+    display: block;
+    padding: 8px 0;
+}
+header nav ul li ul li a:hover{
+    background:rgb(214, 207, 207);
+}
+header nav ul li ul li a:hover::after{
+     visibility: hidden;
+}
+header nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+}
+/* header css end */
+
+/* banner css start  */
+
+.banner{
+    background-image: url(./img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    padding: 220px 0;
+    color: white;
+   
+    position: relative;
+   
+    
+}
+
+.banner::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.657);
+    left: 0;
+    top: 0;
+    z-index: -20;
+}
+.banner h1{
+font-size: 82px;
+font-weight: 700;
+}
+.banner h4{
+font-size: 34px;
+font-weight: 500;
+margin: 20px 0;
+text-transform: uppercase;
+}
+.banner button{
+border: none;
+background: #C69453;
+color: white;
+padding: 12px 35px;
+text-transform: uppercase;
+margin-top: 23px;
+transition: .6s;
+
+}
+.banner button:hover{
+    background: white;
+    color: #C69453;
+}
+.sub-title {
+    width: 512px;
+    margin: auto;
+    position: relative;
+}
+.banner .sub-title::before {
+    content: "";
+    height: 1.6px;
+    width: 80px;
+    position: absolute;
+    background: #fff;
+    right: 100%;
+    top: 50%;
+}
+.banner .sub-title::after{
+    content: "";
+    height: 1.6px;
+    width: 80px;
+    position: absolute;
+    background:#fff;
+    left: 100%;
+    top: 50%;
+
+}
+
+/* banner css end   */
+
+/* service section css start  */
+
+.service{
+    background: #f1f1f1;
+    text-align: center;
+    padding: 60px 0;}
+
+.service .box{
+    width: 17%;
+    margin: 10px;
+    background: #FFFFFF;
+    padding: 50px 5px;
+    display: inline-block;
+    transition: .5s;
+}
+
+.service .all-box{
+    width: 100%;
+    margin: auto;
+}
+.service .all-box .log{
+    transition: .5s;
+}
+.service .box .logo img{
+margin-bottom: 20px;
+transition: .5s;
+}
+.service .box .title h4{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.service .box .para{
+
+}
+.service .box .para p {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.76);
+    font-weight: 400;
+    padding: 10px 20px;
+}
+.service .all-box .btn a {
+    background: #C69453;
+    color: white;
+    padding: 8px 18px;
+    transition: .6s;
+    text-decoration: none;
+    border-radius: 5px;
+    
+}
+.service .all-box .btn{
+    transition: .5s;
+}
+.service .all-box .btn:hover .logo{
+    transform: rotateY(360deg);
+}
+
+/* hover part  */
+
+.service .all-box .box:hover .logo{
+ transform: rotateY(360deg);
+ transition: .5s;
+
+}
+
+.service .all-box .box:hover{
+    background: rgba(128, 128, 128, 0.157);
+}
+
+.service .all-box .box:hover .btn a{
+   background: white;
+   color: #C69453;
+}
+.service .all-box .box:hover .btn a:hover{
+    background: black;
+    color: white;
+  
+    
+}
+.service .all-box .box .btn:hover{
+    transform: translateY(10px);
+   
+}
+
+.service .all-box .box:hover .btn a:hover .logo{
+    transform: rotateX(360deg);
+}
+/* service section css end  */
+
+/* about section start  */
+
+.about{
+    background: #f1f1f1;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+.about .video{
+    width: 33%;
+    float: left;
+    margin-left: 230px;
+}
+.about .content {
+    width: 38%;
+    float: right;
+    margin-right: 150px;
+}
+.vinno-color{
+    color:#C69453 ;
+}
+.about .content h1{font-weight: 700;}
+.about .content p{
+    color: rgba(0, 0, 0, 0.74);
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.about .content a{
+    text-decoration: none;
+    color: white;
+    background: black;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    transition: .5s;
+}
+.about .content a:hover{
+    background:  #C69453;;
+}
+
+/* about section end  */
+
+
+/* contuct start  */
+.contuct-section{
+    background: #f1f1f1;
+    padding-top: 50px;
+}
+.contuct-section .form{
+    width: 35%;
+    float: left;
+    margin-left: 200px;
+    margin-top: 50px;
+
+}
+.contuct-section .form h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+}
+.contuct-section .form p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000a8;
+    /* margin-bottom: 0; */
+    margin: 30px 0;
+}
+.contuct-section .form input{
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    /* height: 30px; */
+    border: none;
+    border: 2px solid #80808047;
+    border-radius: 2px;
+    height: 45px;
+    /* box-shadow: -1px 2px 20px 4px #00000012; */
+}
+.contuct-section .form textarea{
+    width: 100%;
+}
+.contuct-section .pic{
+    width: 40%;
+    float: right;
+  
+}
+.contuct-section .pic img {
+    width: 90%;
+}
+.contuct-section .form button {
+    background: #C69453;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    margin-top: 20px;
+}
+    
+
+/* contuct end  */
+footer{
+background: #6D6D6D;
+color: white;
+padding: 40px 0;
+
+}
+footer .copy {
+    float: left;
+    width: 40%;
+    margin-left: 100px;
+    color: rgba(255, 255, 255, 0.685);
+    
+}
+
+footer nav {
+    float: right;
+    width: 40%;
+    margin-left: 200px;
+    position: relative;
+    left: 180px;   
+}
+footer nav span{
+    padding: 0 15px;
+}
